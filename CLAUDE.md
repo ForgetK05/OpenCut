@@ -1,108 +1,108 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+File này cung cấp hướng dẫn cho Claude Code (claude.ai/code) khi làm việc với code trong repository này.
 
-## Project Overview
+## Tổng Quan Dự Án
 
-OpenCut is a free, open-source video editor built with Next.js, focusing on privacy (no server processing), multi-track timeline editing, and real-time preview. The project is a monorepo using Turborepo with multiple apps including a web application, desktop app (Tauri), background remover tools, and transcription services.
+OpenCut là một video editor miễn phí, open-source được xây dựng với Next.js, tập trung vào privacy (không xử lý trên server), multi-track timeline editing, và real-time preview. Dự án là một monorepo sử dụng Turborepo với nhiều apps bao gồm web application, desktop app (Tauri), background remover tools, và transcription services.
 
-## Essential Commands
+## Các Lệnh Cơ Bản
 
 **Development:**
 ```bash
 # Root level development
-bun dev                    # Start all apps in development mode
-bun build                  # Build all apps
-bun lint                   # Lint all code using Ultracite
-bun format                 # Format all code using Ultracite
+bun dev                    # Khởi động tất cả apps ở development mode
+bun build                  # Build tất cả apps
+bun lint                   # Lint tất cả code sử dụng Ultracite
+bun format                 # Format tất cả code sử dụng Ultracite
 
-# Web app specific (from apps/web/)
+# Web app specific (từ apps/web/)
 cd apps/web
-bun run dev                # Start Next.js development server with Turbopack
-bun run build              # Build for production
-bun run lint               # Run Biome linting
-bun run lint:fix           # Fix linting issues automatically
-bun run format             # Format code with Biome
+bun run dev                # Khởi động Next.js development server với Turbopack
+bun run build              # Build cho production
+bun run lint               # Chạy Biome linting
+bun run lint:fix           # Tự động fix các linting issues
+bun run format             # Format code với Biome
 
-# Database operations (from apps/web/)
+# Database operations (từ apps/web/)
 bun run db:generate        # Generate Drizzle migrations
-bun run db:migrate         # Run migrations
-bun run db:push:local      # Push schema to local development database
-bun run db:push:prod       # Push schema to production database
+bun run db:migrate         # Chạy migrations
+bun run db:push:local      # Push schema đến local development database
+bun run db:push:prod       # Push schema đến production database
 ```
 
 **Testing:**
-- No unified test commands are currently configured
-- Individual apps may have their own test setups
+- Hiện chưa có test commands thống nhất được cấu hình
+- Các apps riêng lẻ có thể có test setups riêng
 
-## Architecture & Key Components
+## Kiến Trúc & Các Component Chính
 
 ### State Management
-The application uses **Zustand** for state management with separate stores for different concerns:
+Application sử dụng **Zustand** cho state management với các stores riêng biệt cho các mối quan tâm khác nhau:
 - **editor-store.ts**: Canvas presets, layout guides, app initialization
 - **timeline-store.ts**: Timeline tracks, elements, playback state
-- **media-store.ts**: Media files and asset management
-- **playback-store.ts**: Video playback controls and timing
-- **project-store.ts**: Project-level data and persistence
-- **panel-store.ts**: UI panel visibility and layout
+- **media-store.ts**: Media files và asset management
+- **playback-store.ts**: Video playback controls và timing
+- **project-store.ts**: Project-level data và persistence
+- **panel-store.ts**: UI panel visibility và layout
 - **keybindings-store.ts**: Keyboard shortcut management
-- **sounds-store.ts**: Audio effects and sound management
+- **sounds-store.ts**: Audio effects và sound management
 - **stickers-store.ts**: Sticker/graphics management
 
 ### Storage System
-**Multi-layer storage approach:**
-- **IndexedDB**: Projects, saved sounds, and structured data
-- **OPFS (Origin Private File System)**: Large media files for better performance
-- **Storage Service** (`lib/storage/`): Abstraction layer managing both storage types
+**Cách tiếp cận multi-layer storage:**
+- **IndexedDB**: Projects, saved sounds, và structured data
+- **OPFS (Origin Private File System)**: Large media files để có performance tốt hơn
+- **Storage Service** (`lib/storage/`): Abstraction layer quản lý cả hai loại storage
 
 ### Editor Architecture
 **Core editor components:**
-- **Timeline Canvas**: Custom canvas-based timeline with tracks and elements
-- **Preview Panel**: Real-time video preview (currently DOM-based, planned binary refactor)
-- **Media Panel**: Asset management with drag-and-drop support
+- **Timeline Canvas**: Custom canvas-based timeline với tracks và elements
+- **Preview Panel**: Real-time video preview (hiện tại là DOM-based, có kế hoạch binary refactor)
+- **Media Panel**: Asset management với drag-and-drop support
 - **Properties Panel**: Context-sensitive element properties
 
 ### Media Processing
-- **FFmpeg Integration**: Client-side video processing using @ffmpeg/ffmpeg
-- **Background Removal**: Python-based tools with multiple AI models (U2Net, SAM, Gemini)
-- **Transcription**: Separate service for audio-to-text conversion
+- **FFmpeg Integration**: Client-side video processing sử dụng @ffmpeg/ffmpeg
+- **Background Removal**: Python-based tools với nhiều AI models (U2Net, SAM, Gemini)
+- **Transcription**: Service riêng cho audio-to-text conversion
 
-## Development Focus Areas
+## Các Lĩnh Vực Phát Triển Trọng Tâm
 
-**✅ Recommended contribution areas:**
-- Timeline functionality and UI improvements
+**✅ Các lĩnh vực đóng góp được khuyến nghị:**
+- Timeline functionality và UI improvements
 - Project management features
 - Performance optimizations
-- Bug fixes in existing functionality
-- UI/UX improvements outside preview panel
-- Documentation and testing
+- Bug fixes trong existing functionality
+- UI/UX improvements bên ngoài preview panel
+- Documentation và testing
 
-**⚠️ Areas to avoid (pending refactor):**
+**⚠️ Các lĩnh vực nên tránh (đang chờ refactor):**
 - Preview panel enhancements (fonts, stickers, effects)
 - Export functionality improvements
 - Preview rendering optimizations
 
-**Reason:** The preview system is planned for a major refactor from DOM-based rendering to binary rendering for consistency with export and better performance.
+**Lý do:** Preview system đang có kế hoạch refactor lớn từ DOM-based rendering sang binary rendering để đồng nhất với export và có performance tốt hơn.
 
-## Code Quality Standards
+## Các Tiêu Chuẩn Code Quality
 
 **Linting & Formatting:**
-- Uses **Biome** for JavaScript/TypeScript linting and formatting
-- Extends **Ultracite** configuration for strict type safety and AI-friendly code
-- Comprehensive accessibility (a11y) rules enforced
-- Zero configuration approach with subsecond performance
+- Sử dụng **Biome** cho JavaScript/TypeScript linting và formatting
+- Extends **Ultracite** configuration cho strict type safety và AI-friendly code
+- Comprehensive accessibility (a11y) rules được enforced
+- Zero configuration approach với subsecond performance
 
-**Key coding standards from Ultracite:**
-- Strict TypeScript with no `any` types
-- No React imports (uses automatic JSX runtime)
+**Các coding standards chính từ Ultracite:**
+- Strict TypeScript không có `any` types
+- Không React imports (sử dụng automatic JSX runtime)
 - Comprehensive accessibility requirements
-- Use `for...of` instead of `Array.forEach`
-- No TypeScript enums, use const objects
-- Always include error handling with try-catch
+- Sử dụng `for...of` thay vì `Array.forEach`
+- Không TypeScript enums, sử dụng const objects
+- Luôn bao gồm error handling với try-catch
 
-## Environment Setup
+## Cài Đặt Environment
 
-**Required environment variables (apps/web/.env.local):**
+**Các environment variables bắt buộc (apps/web/.env.local):**
 ```bash
 # Database
 DATABASE_URL="postgresql://opencut:opencutthegoat@localhost:5432/opencut"
@@ -122,11 +122,11 @@ NEXT_PUBLIC_MARBLE_API_URL="https://api.marblecms.com"
 
 **Docker services:**
 ```bash
-# Start local database and Redis
+# Khởi động local database và Redis
 docker-compose up -d
 ```
 
-## Project Structure
+## Cấu Trúc Dự Án
 
 **Monorepo layout:**
 - `apps/web/` - Main Next.js application
@@ -136,14 +136,14 @@ docker-compose up -d
 - `packages/` - Shared packages (auth, database)
 
 **Web app structure:**
-- `src/components/` - React components organized by feature
+- `src/components/` - React components được tổ chức theo feature
 - `src/stores/` - Zustand state management
 - `src/hooks/` - Custom React hooks
-- `src/lib/` - Utility functions and services
+- `src/lib/` - Utility functions và services
 - `src/types/` - TypeScript type definitions
-- `src/app/` - Next.js app router pages and API routes
+- `src/app/` - Next.js app router pages và API routes
 
-## Common Patterns
+## Các Patterns Phổ Biến
 
 **Error handling:**
 ```typescript

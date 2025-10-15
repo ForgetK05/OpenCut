@@ -5,54 +5,54 @@
     </td>
     <td align="right">
       <h1>OpenCut</span></h1>
-      <h3 style="margin-top: -10px;">A free, open-source video editor for web, desktop, and mobile.</h3>
+      <h3 style="margin-top: -10px;">Trình chỉnh sửa video miễn phí, mã nguồn mở cho web, desktop và mobile.</h3>
     </td>
   </tr>
 </table>
 
-## Why?
+## Tại sao?
 
-- **Privacy**: Your videos stay on your device
-- **Free features**: Every basic feature of CapCut is paywalled now
-- **Simple**: People want editors that are easy to use - CapCut proved that
+- **Quyền riêng tư**: Video của bạn được lưu trữ trên thiết bị của bạn
+- **Tính năng miễn phí**: Mọi tính năng cơ bản của CapCut hiện đều phải trả phí
+- **Đơn giản**: Mọi người muốn các trình chỉnh sửa dễ sử dụng - CapCut đã chứng minh điều đó
 
-## Features
+## Tính năng
 
-- Timeline-based editing
-- Multi-track support
-- Real-time preview
-- No watermarks or subscriptions
-- Analytics provided by [Databuddy](https://www.databuddy.cc?utm_source=opencut), 100% Anonymized & Non-invasive.
-- Blog powered by [Marble](https://marblecms.com?utm_source=opencut), Headless CMS.
+- Chỉnh sửa dựa trên timeline
+- Hỗ trợ đa track
+- Preview theo thời gian thực
+- Không watermark hoặc subscription
+- Analytics được cung cấp bởi [Databuddy](https://www.databuddy.cc?utm_source=opencut), 100% Ẩn danh & Không xâm phạm.
+- Blog được hỗ trợ bởi [Marble](https://marblecms.com?utm_source=opencut), Headless CMS.
 
-## Project Structure
+## Cấu trúc dự án
 
-- `apps/web/` – Main Next.js web application
-- `src/components/` – UI and editor components
+- `apps/web/` – Ứng dụng web Next.js chính
+- `src/components/` – Các component UI và editor
 - `src/hooks/` – Custom React hooks
-- `src/lib/` – Utility and API logic
-- `src/stores/` – State management (Zustand, etc.)
+- `src/lib/` – Logic tiện ích và API
+- `src/stores/` – Quản lý state (Zustand, v.v.)
 - `src/types/` – TypeScript types
 
-## Getting Started
+## Bắt đầu
 
-### Prerequisites
+### Yêu cầu
 
-Before you begin, ensure you have the following installed on your system:
+Trước khi bắt đầu, hãy đảm bảo bạn đã cài đặt những thứ sau trên hệ thống của mình:
 
-- [Node.js](https://nodejs.org/en/) (v18 or later)
+- [Node.js](https://nodejs.org/en/) (v18 hoặc mới hơn)
 - [Bun](https://bun.sh/docs/installation)
-  (for `npm` alternative)
-- [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/)
+  (thay thế cho `npm`)
+- [Docker](https://docs.docker.com/get-docker/) và [Docker Compose](https://docs.docker.com/compose/install/)
 
-> **Note:** Docker is optional, but it's essential for running the local database and Redis services. If you're planning to run the frontend or want to contribute to frontend features, you can skip the Docker setup. If you have followed the steps below in [Setup](#setup), you're all set to go!
+> **Lưu ý:** Docker là tùy chọn, nhưng nó rất cần thiết để chạy database và Redis services cục bộ. Nếu bạn chỉ định chạy frontend hoặc muốn đóng góp cho các tính năng frontend, bạn có thể bỏ qua việc cài đặt Docker. Nếu bạn đã làm theo các bước bên dưới trong [Cài đặt](#cài-đặt), bạn đã sẵn sàng!
 
-### Setup
+### Cài đặt
 
-1. Fork the repository
-2. Clone your fork locally
-3. Navigate to the web app directory: `cd apps/web`
-4. Copy `.env.example` to `.env.local`:
+1. Fork repository
+2. Clone fork của bạn về máy cục bộ
+3. Di chuyển đến thư mục web app: `cd apps/web`
+4. Sao chép `.env.example` sang `.env.local`:
 
    ```bash
    # Unix/Linux/Mac
@@ -65,27 +65,27 @@ Before you begin, ensure you have the following installed on your system:
    Copy-Item .env.example .env.local
    ```
 
-5. Install dependencies: `bun install`
-6. Start the development server: `bun dev`
+5. Cài đặt dependencies: `bun install`
+6. Khởi động development server: `bun dev`
 
-## Development Setup
+## Thiết lập Development
 
 ### Local Development
 
-1. Start the database and Redis services:
+1. Khởi động database và Redis services:
 
    ```bash
-   # From project root
+   # Từ thư mục gốc dự án
    docker-compose up -d
    ```
 
-2. Navigate to the web app directory:
+2. Di chuyển đến thư mục web app:
 
    ```bash
    cd apps/web
    ```
 
-3. Copy `.env.example` to `.env.local`:
+3. Sao chép `.env.example` sang `.env.local`:
 
    ```bash
    # Unix/Linux/Mac
@@ -98,19 +98,19 @@ Before you begin, ensure you have the following installed on your system:
    Copy-Item .env.example .env.local
    ```
 
-4. Configure required environment variables in `.env.local`:
+4. Cấu hình các biến môi trường cần thiết trong `.env.local`:
 
-   **Required Variables:**
+   **Các biến bắt buộc:**
 
    ```bash
-   # Database (matches docker-compose.yaml)
+   # Database (khớp với docker-compose.yaml)
    DATABASE_URL="postgresql://opencut:opencutthegoat@localhost:5432/opencut"
 
-   # Generate a secure secret for Better Auth
+   # Tạo một secret an toàn cho Better Auth
    BETTER_AUTH_SECRET="your-generated-secret-here"
    BETTER_AUTH_URL="http://localhost:3000"
 
-   # Redis (matches docker-compose.yaml)
+   # Redis (khớp với docker-compose.yaml)
    UPSTASH_REDIS_REST_URL="http://localhost:8079"
    UPSTASH_REDIS_REST_TOKEN="example_token"
 
@@ -122,43 +122,43 @@ Before you begin, ensure you have the following installed on your system:
    NODE_ENV="development"
    ```
 
-   **Generate BETTER_AUTH_SECRET:**
+   **Tạo BETTER_AUTH_SECRET:**
 
    ```bash
    # Unix/Linux/Mac
    openssl rand -base64 32
 
-   # Windows PowerShell (simple method)
+   # Windows PowerShell (phương pháp đơn giản)
    [System.Web.Security.Membership]::GeneratePassword(32, 0)
 
-   # Cross-platform (using Node.js)
+   # Đa nền tảng (sử dụng Node.js)
    node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
 
-   # Or use an online generator: https://generate-secret.vercel.app/32
+   # Hoặc sử dụng trình tạo online: https://generate-secret.vercel.app/32
    ```
 
-5. Run database migrations: `bun run db:migrate` from (inside apps/web)
-6. Start the development server: `bun run dev` from (inside apps/web)
+5. Chạy database migrations: `bun run db:migrate` từ (bên trong apps/web)
+6. Khởi động development server: `bun run dev` từ (bên trong apps/web)
 
-The application will be available at [http://localhost:3000](http://localhost:3000).
+Ứng dụng sẽ có sẵn tại [http://localhost:3000](http://localhost:3000).
 
-## Contributing
+## Đóng góp
 
-We welcome contributions! While we're actively developing and refactoring certain areas, there are plenty of opportunities to contribute effectively.
+Chúng tôi hoan nghênh các đóng góp! Trong khi chúng tôi đang tích cực phát triển và tái cấu trúc một số khu vực nhất định, có rất nhiều cơ hội để đóng góp hiệu quả.
 
-**🎯 Focus areas:** Timeline functionality, project management, performance, bug fixes, and UI improvements outside the preview panel.
+**🎯 Các lĩnh vực trọng tâm:** Chức năng timeline, quản lý dự án, hiệu suất, sửa lỗi và cải thiện UI bên ngoài preview panel.
 
-**⚠️ Avoid for now:** Preview panel enhancements (fonts, stickers, effects) and export functionality - we're refactoring these with a new binary rendering approach.
+**⚠️ Tránh hiện tại:** Cải tiến preview panel (fonts, stickers, effects) và chức năng export - chúng tôi đang tái cấu trúc những phần này với phương pháp rendering binary mới.
 
-See our [Contributing Guide](.github/CONTRIBUTING.md) for detailed setup instructions, development guidelines, and complete focus area guidance.
+Xem [Hướng dẫn đóng góp](.github/CONTRIBUTING.md) của chúng tôi để biết hướng dẫn thiết lập chi tiết, nguyên tắc development và hướng dẫn lĩnh vực trọng tâm đầy đủ.
 
-**Quick start for contributors:**
+**Bắt đầu nhanh cho contributors:**
 
-- Fork the repo and clone locally
-- Follow the setup instructions in CONTRIBUTING.md
-- Create a feature branch and submit a PR
+- Fork repo và clone về máy cục bộ
+- Làm theo hướng dẫn thiết lập trong CONTRIBUTING.md
+- Tạo feature branch và submit một PR
 
-## Sponsors
+## Nhà tài trợ
 
 <a href="https://fal.ai">
   <img alt="Powered by fal.ai" src="https://img.shields.io/badge/Powered%20by-fal.ai-000000?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMCAxMEwxMy4wOSAxNS43NEwxMiAyMkwxMC45MSAxNS43NEw0IDEwTDEwLjkxIDguMjZMMTIgMloiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" />
@@ -168,7 +168,7 @@ See our [Contributing Guide](.github/CONTRIBUTING.md) for detailed setup instruc
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FOpenCut-app%2FOpenCut&project-name=opencut&repository-name=opencut)
 
-## License
+## Giấy phép
 
 [MIT LICENSE](LICENSE)
 

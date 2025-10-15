@@ -1,28 +1,28 @@
-# Security Policy
+# Chính Sách Bảo Mật (Security Policy)
 
-## Supported Versions
+## Các Phiên Bản Được Hỗ Trợ
 
 | Version | Supported          |
 | ------- | ------------------ |
 | 1.x.x   | :white_check_mark: |
 
-## Reporting a Vulnerability
+## Báo Cáo Lỗ Hổng Bảo Mật (Vulnerability)
 
-We take security vulnerabilities seriously. If you discover a security vulnerability within OpenCut, please send an email to security@opencut.app. All security vulnerabilities will be promptly addressed.
+Chúng tôi rất coi trọng các lỗ hổng bảo mật. Nếu bạn phát hiện lỗ hổng bảo mật trong OpenCut, vui lòng gửi email đến security@opencut.app. Tất cả các lỗ hổng bảo mật sẽ được giải quyết kịp thời.
 
-Please do not report security vulnerabilities through public GitHub issues.
+Vui lòng không báo cáo lỗ hổng bảo mật thông qua GitHub issues công khai.
 
-### What to include in your report
+### Thông tin cần bao gồm trong báo cáo của bạn
 
-- Description of the vulnerability
-- Steps to reproduce
-- Potential impact
-- Any suggested fixes
+- Mô tả về lỗ hổng bảo mật
+- Các bước để tái hiện
+- Tác động tiềm ẩn
+- Bất kỳ đề xuất sửa chữa nào
 
-### Response timeline
+### Thời gian phản hồi
 
-- We will acknowledge receipt within 48 hours
-- We will provide a detailed response within 5 business days
-- We will keep you updated on our progress
+- Chúng tôi sẽ xác nhận đã nhận được trong vòng 48 giờ
+- Chúng tôi sẽ cung cấp phản hồi chi tiết trong vòng 5 ngày làm việc
+- Chúng tôi sẽ cập nhật cho bạn về tiến độ của chúng tôi
 
-Thank you for helping keep OpenCut secure! 
+Cảm ơn bạn đã giúp giữ cho OpenCut an toàn! 

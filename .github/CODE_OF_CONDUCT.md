@@ -1,88 +1,87 @@
-# Contributor Covenant Code of Conduct
+# Quy Tắc Ứng Xử (Code of Conduct)
 
-## Our Pledge
+## Cam Kết Của Chúng Tôi
 
-We as members, contributors, and leaders pledge to make participation in our
-community a harassment-free experience for everyone, regardless of age, body
-size, visible or invisible disability, ethnicity, sex characteristics, gender
-identity and expression, level of experience, education, socio-economic status,
-nationality, personal appearance, race, caste, color, religion, or sexual
-identity and orientation.
+Với tư cách là thành viên, contributor và người lãnh đạo, chúng tôi cam kết làm cho việc tham gia vào
+cộng đồng của chúng tôi trở thành một trải nghiệm không có quấy rối cho tất cả mọi người, bất kể tuổi tác, kích thước cơ thể,
+khuyết tật nhìn thấy được hoặc không nhìn thấy được, dân tộc, đặc điểm giới tính, bản sắc và biểu hiện giới tính,
+mức độ kinh nghiệm, trình độ học vấn, địa vị kinh tế-xã hội, quốc tịch, ngoại hình cá nhân, chủng tộc, đẳng cấp,
+màu da, tôn giáo, hoặc bản sắc và xu hướng tính dục.
 
-We pledge to act and interact in ways that contribute to an open, welcoming,
-diverse, inclusive, and healthy community.
+Chúng tôi cam kết hành động và tương tác theo những cách góp phần tạo nên một cộng đồng
+cởi mở, thân thiện, đa dạng, hòa nhập và lành mạnh.
 
-## Our Standards
+## Tiêu Chuẩn Của Chúng Tôi
 
-Examples of behavior that contributes to a positive environment for our
-community include:
+Các ví dụ về hành vi góp phần tạo ra môi trường tích cực cho
+cộng đồng của chúng tôi bao gồm:
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes,
-  and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the overall
-  community
+* Thể hiện sự đồng cảm và lòng tốt đối với người khác
+* Tôn trọng các ý kiến, quan điểm và kinh nghiệm khác nhau
+* Đưa ra và nhận feedback mang tính xây dựng một cách trang trọng
+* Chấp nhận trách nhiệm và xin lỗi những người bị ảnh hưởng bởi sai lầm của chúng ta,
+  và học hỏi từ kinh nghiệm đó
+* Tập trung vào những gì tốt nhất không chỉ cho bản thân chúng ta, mà cho toàn bộ
+  cộng đồng
 
-Examples of unacceptable behavior include:
+Các ví dụ về hành vi không thể chấp nhận được bao gồm:
 
-* The use of sexualized language or imagery, and sexual attention or advances of
-  any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email address,
-  without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+* Sử dụng ngôn ngữ hoặc hình ảnh có tính chất tình dục, và sự chú ý hoặc tiếp cận tình dục dưới
+  bất kỳ hình thức nào
+* Trolling, bình luận xúc phạm hoặc xỉ nhục, và các cuộc tấn công cá nhân hoặc chính trị
+* Quấy rối công khai hoặc riêng tư
+* Công bố thông tin cá nhân của người khác, chẳng hạn như địa chỉ vật lý hoặc email,
+  mà không có sự cho phép rõ ràng của họ
+* Hành vi khác có thể được coi là không phù hợp trong
+  bối cảnh chuyên nghiệp
 
-## Enforcement Responsibilities
+## Trách Nhiệm Thực Thi
 
-Community leaders are responsible for clarifying and enforcing our standards of
-acceptable behavior and will take appropriate and fair corrective action in
-response to any behavior that they deem inappropriate, threatening, offensive,
-or harmful.
+Các nhà lãnh đạo cộng đồng chịu trách nhiệm làm rõ và thực thi các tiêu chuẩn về
+hành vi có thể chấp nhận được và sẽ thực hiện hành động khắc phục thích hợp và công bằng để
+đáp lại bất kỳ hành vi nào mà họ cho là không phù hợp, đe dọa, xúc phạm,
+hoặc gây hại.
 
-Community leaders have the right and responsibility to remove, edit, or reject
-comments, commits, code, wiki edits, issues, and other contributions that are
-not aligned to this Code of Conduct, and will communicate reasons for moderation
-decisions when appropriate.
+Các nhà lãnh đạo cộng đồng có quyền và trách nhiệm xóa, chỉnh sửa hoặc từ chối
+comment, commit, code, chỉnh sửa wiki, issue và các đóng góp khác không
+phù hợp với Quy Tắc Ứng Xử này, và sẽ thông báo lý do cho các quyết định điều tiết
+khi thích hợp.
 
-## Scope
+## Phạm Vi
 
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
-Examples of representing our community include using an official e-mail address,
-posting via an official social media account, or acting as an appointed
-representative at an online or offline event.
+Quy Tắc Ứng Xử này áp dụng trong tất cả các không gian cộng đồng, và cũng áp dụng khi
+một cá nhân đại diện chính thức cho cộng đồng trong các không gian công cộng.
+Các ví dụ về đại diện cho cộng đồng của chúng tôi bao gồm sử dụng địa chỉ email chính thức,
+đăng bài qua tài khoản mạng xã hội chính thức, hoặc hành động với tư cách đại diện được chỉ định
+tại một sự kiện trực tuyến hoặc ngoại tuyến.
 
-## Enforcement
+## Thực Thi
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at our discord server.
-All complaints will be reviewed and investigated promptly and fairly.
+Các trường hợp hành vi lạm dụng, quấy rối hoặc hành vi không thể chấp nhận được có thể được
+báo cáo cho các nhà lãnh đạo cộng đồng chịu trách nhiệm thực thi tại discord server của chúng tôi.
+Tất cả các khiếu nại sẽ được xem xét và điều tra kịp thời và công bằng.
 
-All community leaders are obligated to respect the privacy and security of the
-reporter of any incident.
+Tất cả các nhà lãnh đạo cộng đồng có nghĩa vụ tôn trọng quyền riêng tư và an ninh của
+người báo cáo bất kỳ sự cố nào.
 
-## Enforcement Guidelines
+## Hướng Dẫn Thực Thi
 
-Community leaders will follow these Community Impact Guidelines in determining
-the consequences for any action they deem in violation of this Code of Conduct:
+Các nhà lãnh đạo cộng đồng sẽ tuân theo các Hướng Dẫn Tác Động Cộng Đồng (Community Impact Guidelines) này để xác định
+hậu quả cho bất kỳ hành động nào họ cho là vi phạm Quy Tắc Ứng Xử này:
 
-### 1. Correction
+### 1. Sửa Chữa (Correction)
 
-**Community Impact**: Use of inappropriate language or other behavior deemed
-unprofessional or unwelcome in the community.
+**Tác Động Cộng Đồng**: Sử dụng ngôn ngữ không phù hợp hoặc hành vi khác được coi là
+không chuyên nghiệp hoặc không được chào đón trong cộng đồng.
 
-**Consequence**: A private, written warning from community leaders, providing
-clarity around the nature of the violation and an explanation of why the
-behavior was inappropriate. A public apology may be requested.
+**Hậu Quả**: Một cảnh báo riêng tư, bằng văn bản từ các nhà lãnh đạo cộng đồng, cung cấp
+sự rõ ràng về bản chất của vi phạm và giải thích tại sao
+hành vi đó không phù hợp. Có thể yêu cầu xin lỗi công khai.
 
-## Attribution
+## Ghi Công
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage],
-version 2.1, available at
+Quy Tắc Ứng Xử này được điều chỉnh từ [Contributor Covenant][homepage],
+phiên bản 2.1, có sẵn tại
 [https://www.contributor-covenant.org/version/2/1/code_of_conduct.html][v2.1].
 
 [homepage]: https://www.contributor-covenant.org

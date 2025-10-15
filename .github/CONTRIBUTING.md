@@ -1,24 +1,24 @@
-# Contributing to OpenCut
+# Đóng Góp Cho OpenCut
 
-Thank you for your interest in contributing to OpenCut! This document provides guidelines and instructions for contributing.
+Cảm ơn bạn đã quan tâm đến việc đóng góp cho OpenCut! Tài liệu này cung cấp hướng dẫn và chỉ dẫn để đóng góp.
 
-## Getting Started
+## Bắt Đầu
 
-### Prerequisites
+### Yêu Cầu Tiên Quyết
 
-- [Node.js](https://nodejs.org/en/) (v18 or later)
+- [Node.js](https://nodejs.org/en/) (v18 trở lên)
 - [Bun](https://bun.sh/docs/installation)
-  (for `npm` alternative)
-- [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/)
+  (thay thế cho `npm`)
+- [Docker](https://docs.docker.com/get-docker/) và [Docker Compose](https://docs.docker.com/compose/install/)
 
-> **Note:** Docker is optional, but it's essential for running the local database and Redis services. If you're planning to contribute to frontend features, you can skip the Docker setup. If you have followed the steps below in [Setup](#setup), you're all set to go!
+> **Lưu ý:** Docker là tùy chọn, nhưng nó rất cần thiết để chạy database và Redis services cục bộ. Nếu bạn đang có kế hoạch đóng góp cho các tính năng frontend, bạn có thể bỏ qua việc cài đặt Docker. Nếu bạn đã làm theo các bước bên dưới trong [Setup](#setup), bạn đã sẵn sàng!
 
-### Setup
+### Cài Đặt (Setup)
 
-1. Fork the repository
-2. Clone your fork locally
-3. Navigate to the web app directory: `cd apps/web`
-4. Copy `.env.example` to `.env.local`:
+1. Fork repository
+2. Clone fork của bạn về máy cục bộ
+3. Di chuyển đến thư mục web app: `cd apps/web`
+4. Copy `.env.example` thành `.env.local`:
 
    ```bash
    # Unix/Linux/Mac
@@ -31,55 +31,55 @@ Thank you for your interest in contributing to OpenCut! This document provides g
    Copy-Item .env.example .env.local
    ```
 
-5. Install dependencies: `bun install`
-6. Start the development server: `bun run dev`
+5. Cài đặt dependencies: `bun install`
+6. Khởi động development server: `bun run dev`
 
-> **Note:** If you see an error like `Unsupported URL Type "workspace:*"` when running `npm install`, you have two options:
+> **Lưu ý:** Nếu bạn gặp lỗi như `Unsupported URL Type "workspace:*"` khi chạy `npm install`, bạn có hai lựa chọn:
 >
-> 1. Upgrade to a recent npm version (v9 or later), which has full workspace protocol support.
-> 2. Use an alternative package manager such as **bun** or **pnpm**.
+> 1. Nâng cấp lên phiên bản npm gần đây (v9 trở lên), có hỗ trợ đầy đủ workspace protocol.
+> 2. Sử dụng package manager thay thế như **bun** hoặc **pnpm**.
 
-## What to Focus On
+## Nên Tập Trung Vào Đâu
 
-**🎯 Good Areas to Contribute:**
+**🎯 Các Lĩnh Vực Tốt Để Đóng Góp:**
 
-- Timeline functionality and UI improvements
-- Project management features
-- Performance optimizations
-- Bug fixes in existing functionality
-- UI/UX improvements
-- Documentation and testing
+- Chức năng timeline và cải thiện UI
+- Tính năng quản lý project
+- Tối ưu hóa hiệu suất
+- Sửa bug trong chức năng hiện có
+- Cải thiện UI/UX
+- Documentation và testing
 
-**⚠️ Areas to Avoid:**
+**⚠️ Các Lĩnh Vực Nên Tránh:**
 
-- Preview panel enhancements (text fonts, stickers, effects)
-- Export functionality improvements
-- Preview rendering optimizations
+- Cải thiện preview panel (text fonts, stickers, effects)
+- Cải thiện chức năng export
+- Tối ưu hóa preview rendering
 
-**Why?** We're currently planning a major refactor of the preview system. The current preview renders DOM elements (HTML), but we're moving to a binary rendering approach similar to CapCut. This new system will ensure consistency between preview and export, and provide much better performance and quality.
+**Tại sao?** Chúng tôi hiện đang lên kế hoạch refactor lớn cho hệ thống preview. Preview hiện tại render các phần tử DOM (HTML), nhưng chúng tôi đang chuyển sang phương pháp binary rendering tương tự như CapCut. Hệ thống mới này sẽ đảm bảo tính nhất quán giữa preview và export, đồng thời cung cấp hiệu suất và chất lượng tốt hơn nhiều.
 
-The current HTML-based preview is essentially a prototype - the binary approach will be the "real deal." To avoid wasted effort, please focus on other areas of the application until this refactor is complete.
+Preview dựa trên HTML hiện tại về cơ bản là một prototype - phương pháp binary sẽ là "sản phẩm thực sự". Để tránh lãng phí công sức, vui lòng tập trung vào các lĩnh vực khác của ứng dụng cho đến khi refactor này hoàn thành.
 
-If you're unsure whether your idea falls into the preview category, feel free to ask us [directly in discord](https://discord.gg/zmR9N35cjK) or create a GitHub issue!
+Nếu bạn không chắc chắn liệu ý tưởng của mình có thuộc về danh mục preview hay không, hãy hỏi chúng tôi [trực tiếp trong discord](https://discord.gg/zmR9N35cjK) hoặc tạo một GitHub issue!
 
-## Development Setup
+## Cài Đặt Development
 
 ### Local Development
 
-1. Start the database and Redis services:
+1. Khởi động database và Redis services:
 
    ```bash
-   # From project root
+   # Từ thư mục gốc của project
    docker-compose up -d
    ```
 
-2. Navigate to the web app directory:
+2. Di chuyển đến thư mục web app:
 
    ```bash
    cd apps/web
    ```
 
-3. Copy `.env.example` to `.env.local`:
+3. Copy `.env.example` thành `.env.local`:
 
    ```bash
    # Unix/Linux/Mac
@@ -92,19 +92,19 @@ If you're unsure whether your idea falls into the preview category, feel free to
    Copy-Item .env.example .env.local
    ```
 
-4. Configure required environment variables in `.env.local`:
+4. Cấu hình các biến môi trường bắt buộc trong `.env.local`:
 
-   **Required Variables:**
+   **Biến Bắt Buộc:**
 
    ```bash
-   # Database (matches docker-compose.yaml)
+   # Database (khớp với docker-compose.yaml)
    DATABASE_URL="postgresql://opencut:opencutthegoat@localhost:5432/opencut"
 
-   # Generate a secure secret for Better Auth
+   # Tạo một secret bảo mật cho Better Auth
    BETTER_AUTH_SECRET="your-generated-secret-here"
    NEXT_PUBLIC_BETTER_AUTH_URL="http://localhost:3000"
 
-   # Redis (matches docker-compose.yaml)
+   # Redis (khớp với docker-compose.yaml)
    UPSTASH_REDIS_REST_URL="http://localhost:8079"
    UPSTASH_REDIS_REST_TOKEN="example_token"
 
@@ -112,67 +112,67 @@ If you're unsure whether your idea falls into the preview category, feel free to
    NODE_ENV="development"
    ```
 
-   **Generate BETTER_AUTH_SECRET:**
+   **Tạo BETTER_AUTH_SECRET:**
 
    ```bash
    # Unix/Linux/Mac
    openssl rand -base64 32
 
-   # Windows PowerShell (simple method)
+   # Windows PowerShell (phương pháp đơn giản)
    [System.Web.Security.Membership]::GeneratePassword(32, 0)
 
-   # Cross-platform (using Node.js)
+   # Cross-platform (sử dụng Node.js)
    node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
 
-   # Or use an online generator: https://generate-secret.vercel.app/32
+   # Hoặc sử dụng trình tạo online: https://generate-secret.vercel.app/32
    ```
 
-5. Run database migrations: `bun run db:migrate`
-6. Start the development server: `bun run dev`
+5. Chạy database migrations: `bun run db:migrate`
+6. Khởi động development server: `bun run dev`
 
-## How to Contribute
+## Cách Đóng Góp
 
-### Reporting Bugs
+### Báo Cáo Bug
 
-- Use the bug report template
-- Include steps to reproduce
-- Provide screenshots if applicable
+- Sử dụng template bug report
+- Bao gồm các bước để tái hiện
+- Cung cấp screenshot nếu có thể
 
-### Suggesting Features
+### Đề Xuất Tính Năng
 
-- Use the feature request template
-- Explain the use case
-- Consider implementation details
+- Sử dụng template feature request
+- Giải thích use case
+- Cân nhắc chi tiết implementation
 
-### Code Contributions
+### Đóng Góp Code
 
-1. Create a new branch: `git checkout -b feature/your-feature-name`
-2. Make your changes
-3. Navigate to the web app directory: `cd apps/web`
-4. Run the linter: `bun run lint`
-5. Format your code: `bunx biome format --write .`
-6. Commit your changes with a descriptive message
-7. Push to your fork and create a pull request
+1. Tạo một branch mới: `git checkout -b feature/your-feature-name`
+2. Thực hiện các thay đổi của bạn
+3. Di chuyển đến thư mục web app: `cd apps/web`
+4. Chạy linter: `bun run lint`
+5. Format code của bạn: `bunx biome format --write .`
+6. Commit các thay đổi của bạn với message mô tả rõ ràng
+7. Push lên fork của bạn và tạo pull request
 
 ## Code Style
 
-- We use Biome for code formatting and linting
-- Run `bunx biome format --write .` from the `apps/web` directory to format code
-- Run `bun run lint` from the `apps/web` directory to check for linting issues
-- Follow the existing code patterns
+- Chúng tôi sử dụng Biome cho code formatting và linting
+- Chạy `bunx biome format --write .` từ thư mục `apps/web` để format code
+- Chạy `bun run lint` từ thư mục `apps/web` để kiểm tra linting issues
+- Tuân theo các mẫu code hiện có
 
-## Pull Request Process
+## Quy Trình Pull Request
 
-1. Fill out the pull request template completely
-2. Link any related issues
-3. Ensure CI passes
-4. Request review from maintainers
-5. Address any feedback
+1. Điền đầy đủ pull request template
+2. Liên kết bất kỳ issue liên quan nào
+3. Đảm bảo CI pass
+4. Yêu cầu review từ maintainers
+5. Giải quyết mọi feedback
 
-## Community
+## Cộng Đồng
 
-- Be respectful and inclusive
-- Follow our Code of Conduct
-- Help others in discussions and issues
+- Tôn trọng và hòa nhập
+- Tuân theo Code of Conduct của chúng tôi
+- Giúp đỡ người khác trong discussions và issues
 
-Thank you for contributing!
+Cảm ơn bạn đã đóng góp!
